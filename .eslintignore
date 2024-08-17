@@ -1,0 +1,11 @@
+
+dist
+node_modules
+public
+craco.config.js
+assets
+.prettierrc
+!commitlint.config.js
+.babel.config.js
+!.umirc.ts
+ 

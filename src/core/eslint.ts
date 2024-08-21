@@ -47,7 +47,7 @@ export const eslintInit = async () => {
   // 合并 执行一次 eslint 把重复的对象合并
   const eslint2 = await getEslintrc()
 
-  writeEslintConfig(`${JSON.stringify(eslint2, null, 2)}`)
+  writeEslintConfig(eslint2)
 
   async function writeEslintConfig(eslintConfig: string) {
     fs.outputFileSync(getpath('./.eslintrc'), eslintConfig)

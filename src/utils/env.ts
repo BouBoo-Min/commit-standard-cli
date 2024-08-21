@@ -64,7 +64,7 @@ export const getEslintrc = async (base: string = getEnv('base') as string) => {
   const res = fs.existsSync(file)
   if (!res) return false
   const eslintStr = await fs.readFile(file, 'utf8')
-  return eval(JSON.stringify(eslintStr))
+  return eval(JSON.stringify(eslintStr,null,2))
 }
 
 /**
